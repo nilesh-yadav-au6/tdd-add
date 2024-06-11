@@ -13,4 +13,8 @@ describe("Addition tests", () => {
   test("should return the sum numbers", () => {
     expect(add("15,15")).toBe(30);
   });
+
+  test("should resolve new lines between numbers", () => {
+    expect(add("3\n2,3")).toBe(8);
+  });
 });
