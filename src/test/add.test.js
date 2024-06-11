@@ -17,4 +17,12 @@ describe("Addition tests", () => {
   test("should resolve new lines between numbers", () => {
     expect(add("3\n2,3")).toBe(8);
   });
+
+  test("should support different types of delimiters", () => {
+    expect(add("//;\n1;2")).toBe(3);
+  });
+
+  test("should throw an exception for -ve numbers", () => {
+    expect(() => add("1,-2,3")).toThrow("negative numbers are not allowed: -2");
+  });
 });
