@@ -9,4 +9,8 @@ describe("Addition tests", () => {
     expect(add("4")).toBe(4);
     expect(add("1")).toBe(1);
   });
+
+  test("should return the sum numbers", () => {
+    expect(add("15,15")).toBe(30);
+  });
 });
